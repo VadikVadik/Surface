@@ -1,0 +1,40 @@
+{
+  "name": "surface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadikVadik/Surface.git"
+  },
+  "author": "Vadim Golubev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadikVadik/Surface/issues"
+  },
+  "homepage": "https://github.com/VadikVadik/Surface#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+	"build": "gulp build",
+	"start": "npm run build && gulp watch"
+  }
+}
