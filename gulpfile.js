@@ -17,7 +17,9 @@ var gulp         = require('gulp'),
 gulp.task('jade', function() {
     return gulp.src('app/index.jade')
         .pipe(plumber())
-		.pipe(jade()) 
+		.pipe(jade({
+			pretty: true
+		})) 
         .pipe(gulp.dest('dist'))
 		.pipe(browserSync.reload({stream: true}));
 });

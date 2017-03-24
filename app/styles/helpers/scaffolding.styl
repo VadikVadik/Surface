@@ -1,0 +1,43 @@
+@import 'helpers/variables'
+
+@font-face{
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNovaRegular.woff') format('woff'),
+    url('../fonts/ProximaNovaRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNovaBold.woff') format('woff'),
+    url('../fonts/ProximaNovaBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Proxima Nova Light';
+    src: url('../fonts/ProximaNovaLight.woff') format('woff'),
+    url('../fonts/ProximaNovaLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Proxima Nova Semibold';
+    src: url('../fonts/ProximaNovaSemibold.woff') format('woff'),
+    url('../fonts/ProximaNovaSemibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page
+	font-family 'Proxima Nova', sans
+	font-size 15px
+	line-height 18px
+	
+.wrapper
+	max-width 320px
+	margin 0 auto
+	@media tablet
+		max-width 768px
+	@media desktop
+		max-width 1920px
