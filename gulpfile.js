@@ -5,10 +5,11 @@ var gulp         = require('gulp'),
 	plumber      = require('gulp-plumber'),
 	postcss      = require('gulp-postcss'),
 	autoprefixer = require('autoprefixer'),
-	mqpacker     = require("css-mqpacker"),
+	mqpacker     = require('css-mqpacker'),
 	csso         = require('gulp-csso'),
 	rename       = require('gulp-rename'),
 	imagemin     = require('gulp-imagemin'),
+	spritesmith  = require('gulp.spritesmith'),
 	svgmin       = require('gulp-svgmin'),
 	svgstore     = require('gulp-svgstore'),
 	del          = require('del'),
@@ -41,6 +42,31 @@ gulp.task('style', function () {
 		.pipe(rename("style.min.css"))
     	.pipe(gulp.dest('dist/css'))
     	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('normalize', function () {
+	return gulp.src('app/styles/normalize.css')
+    	.pipe(csso())
+		.pipe(gulp.dest('dist/css'))
+    	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('sprite', function() {
+    var spriteData = 
+        gulp.src('app/icons/**.*')
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: 'sprite.styl',
+                cssFormat: 'stylus',
+                algorithm: 'binary-tree',
+                cssTemplate: 'stylus.template.mustache',
+                cssVarMap: function(sprite) {
+                    sprite.name = 's-' + sprite.name
+                }
+            }));
+
+    spriteData.img.pipe(gulp.dest('dist/images/'));
+    spriteData.css.pipe(gulp.dest('app/styles/helpers'));
 });
 
 gulp.task('images', function() {
@@ -91,6 +117,8 @@ gulp.task('build', function(fn) {
 		"clean",
 		"copy",
 		"jade",
+		"normalize",
+		"sprite",
 		"style",
 		"images",
 		"symbols",
@@ -99,7 +127,7 @@ gulp.task('build', function(fn) {
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-    gulp.watch('app/styles/**/*.styl', ['style']),
-	gulp.watch('app/index.jade', ['jade']),
+    gulp.watch('app/**/*.styl', ['style']),
+	gulp.watch('app/**/*.jade', ['jade']),
 	gulp.watch('app/scripts/**/*.js', browserSync.reload);
 });

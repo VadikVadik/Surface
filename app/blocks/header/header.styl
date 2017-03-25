@@ -1,0 +1,205 @@
+.main-header
+	&__logo-and-target
+		display block
+		margin-bottom 141px
+		
+		@media tablet
+			padding 0 20px
+			margin-top 39px
+			margin-bottom 199px
+			display flex
+			flex-direction row
+			justify-content space-between
+		
+		@media desktop
+			padding 0 192px
+			margin-bottom 310px
+	&__logo
+		display block
+		width 137px
+		height 24px
+		margin 0 auto
+		margin-top 39px
+	
+		@media tablet
+			width 189px
+			height 33px
+			margin 0
+			
+.main-header__target
+	display none
+	
+	@media tablet
+		display block
+		color #fff
+		font-family light, serif
+		font-size 14px
+		line-height 34px
+		text-transform uppercase
+		
+.main-heading
+	position relative
+	color #fff
+	font-size 32px
+	line-height 35px
+	font-weight bold
+	text-transform uppercase
+	margin-bottom 115px
+	clearfix()
+	@media tablet
+		font-size 64px
+	@media desktop
+		font-size 90px
+		margin-bottom 10px
+	&__left-hand,
+	&__right-hand
+		display block
+	&__left-hand
+		margin-left 10px
+		margin-bottom 29px
+		@media tablet
+			margin-left 90px
+			line-height 25px
+		@media desktop
+			margin-left 248px
+			line-height 51px
+	&__right-hand
+		width 240px
+		float right
+		margin-right 10px
+		@media tablet
+			width 480px
+			margin-right 90px
+			line-height 69px
+		@media desktop
+			position relative
+			width auto
+			margin-right 257px
+			z-index -2
+	&__decoration
+		position absolute
+		top -35%
+		left 47%
+		z-index -1
+		width 4px
+		height 225px
+		background #5d40ad
+		transform rotate(30deg)
+		@media tablet
+			width 6px
+			height 300px
+		@media desktop
+			top -55%
+			left 37%
+			transform rotate(35deg)
+		
+.main-header__store-and-menu
+	display flex
+	flex-direction column
+	
+.store-btn
+	margin 0 auto
+	@media tablet
+		order 1
+	&__app-store
+		margin-right 8px
+		@media tablet
+			margin-right 30px
+		@media desktop
+			margin-right 50px
+	&__app-store,
+	&__google-play
+		position relative
+		display inline-block
+		vertical-align top
+		width 142px
+		height 39px
+		box-sizing border-box
+		color #fff
+		font-size 8px
+		line-height 10px
+		text-transform uppercase
+		text-decoration none
+		font-family 'Proxima Nova Light', sans;
+		background btn-color
+		border-radius 20px
+		padding-left 45px
+		padding-top 11px
+		&::before
+			content ""
+			position absolute
+			top 50%
+			left 20px
+			transform translateY(-50%)
+			@media tablet
+				left 54px
+		@media tablet
+			width 310px
+			height 77px
+			border-radius 50px
+			font-size 14px
+			line-height 16px
+			padding-left 105px
+			padding-top 24px
+	&__app-store::before
+		sprite($s-apple-320)
+		@media tablet
+			sprite($s-apple)
+	&__google-play::before
+		sprite($s-google-320)
+		@media tablet
+			sprite($s-google)
+	&__label
+		display block
+		font-family 'Proxima Nova Semibold', sans;
+
+.main-header__store
+	margin-bottom 46px
+	@media tablet
+		margin-bottom 91px
+	@media desktop
+		margin-bottom 110px
+
+.main-header__menu
+	margin-bottom 20px
+	@media tablet
+		margin-bottom 112px
+	@media desktop
+		margin-bottom 180px
+	
+		
+
+.main-nav
+	&__menu
+		margin 0 auto
+		padding 0
+		list-style none
+		width 250px
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content space-around
+		@media tablet
+			width 695px
+		@media desktop
+			width auto
+			justify-content flex-end
+			margin-right 260px 
+	&__menu-item
+		margin 0 5px
+		@media tablet
+			margin 0
+		@media desktop
+			margin-left 53px
+		
+.main-nav__menu-item a
+	text-decoration none
+	font-size 12px
+	text-transform uppercase
+	color nav-color
+	@media tablet
+		font-size 16px
+		line-height 34px
+	@media desktop
+		font-size 14px
+		

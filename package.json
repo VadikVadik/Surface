@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start": "npm run build && gulp watch"
   },
   "repository": {
     "type": "git",
@@ -31,10 +32,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "gulp.spritesmith": "^6.4.0",
     "run-sequence": "^1.2.2"
-  },
-  "scripts": {
-	"build": "gulp build",
-	"start": "npm run build && gulp watch"
   }
 }
