@@ -1,11 +1,12 @@
 .main-header
+	padding-top 39px
+	background url(../images/header-bg.jpg) no-repeat 45% 0%, main-color
 	&__logo-and-target
 		display block
 		margin-bottom 141px
 		
 		@media tablet
 			padding 0 20px
-			margin-top 39px
 			margin-bottom 199px
 			display flex
 			flex-direction row
@@ -19,7 +20,6 @@
 		width 137px
 		height 24px
 		margin 0 auto
-		margin-top 39px
 	
 		@media tablet
 			width 189px
@@ -53,7 +53,9 @@
 		margin-bottom 10px
 	&__left-hand,
 	&__right-hand
+		position relative
 		display block
+		z-index 3
 	&__left-hand
 		margin-left 10px
 		margin-bottom 29px
@@ -72,15 +74,14 @@
 			margin-right 90px
 			line-height 69px
 		@media desktop
-			position relative
 			width auto
 			margin-right 257px
-			z-index -2
+			z-index 1
 	&__decoration
 		position absolute
 		top -35%
 		left 47%
-		z-index -1
+		z-index 2
 		width 4px
 		height 225px
 		background #5d40ad
