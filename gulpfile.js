@@ -44,11 +44,21 @@ gulp.task('style', function () {
     	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('normalize', function () {
-	return gulp.src('app/styles/normalize.css')
+gulp.task('css', function () {
+	return gulp.src('app/styles/*.css')
     	.pipe(csso())
 		.pipe(gulp.dest('dist/css'))
     	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('scripts', function() {
+	return gulp.src([
+		"app/scripts/**"
+	], {
+		base: "app/."
+	})
+	.pipe(gulp.dest('dist'))
+	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('sprite', function() {
@@ -117,7 +127,8 @@ gulp.task('build', function(fn) {
 		"clean",
 		"copy",
 		"jade",
-		"normalize",
+		"css",
+		"scripts",
 		"sprite",
 		"style",
 		"images",
@@ -128,6 +139,7 @@ gulp.task('build', function(fn) {
 
 gulp.task('watch', ['browser-sync'], function() {
     gulp.watch('app/**/*.styl', ['style']),
+	gulp.watch('app/**/*.css', ['css']),
 	gulp.watch('app/**/*.jade', ['jade']),
-	gulp.watch('app/scripts/**/*.js', browserSync.reload);
+	gulp.watch('app/scripts/**/*.js', ['scripts']);
 });
