@@ -17,7 +17,12 @@
 			padding-bottom 0
 	&__head--right
 		@media tablet
-			margin-left 290px
+			margin-left 37%
+		@media desktop
+			margin-left 50%
+	&__head--left
+		@media desktop
+			margin-left 15%
 	&__img
 		position absolute
 		z-index 1
@@ -29,11 +34,16 @@
 		@media tablet
 			top 0
 			left 7%
+		@media desktop
+			top -3%
+			left 30%
 			
 	&__img--right
 		@media tablet
 			top -10%
 			right 40%
+		@media desktop
+			top -16%
 			
 	&__img--no-js
 		top 5%
@@ -41,14 +51,18 @@
 .features-right-item .info
 	&__block
 		@media tablet
-			
-			padding-left 290px
+			padding-left 37%
+		@media desktop
+			padding-left 50%
 			
 .features-left-item .info
 	&__block
 		@media tablet
 			padding-left 33px
-			padding-right 320px
+			padding-right 41%
+		@media desktop
+			padding-left 15%
+			padding-right 50%
 		
 .info
 	position relative
@@ -60,15 +74,30 @@
 			padding-top 35px
 			padding-bottom 35px
 			box-sizing border-box
+		@media desktop
+			padding-right 17.5%
 	&__block--white
 		@media tablet
 			background #fff
+		@media desktop
+			padding-top 65px
+			padding-bottom 65px
+	&__block--gray
+		@media desktop
+			padding-top 65px
+			padding-bottom 65px
 	&__block--purple
 		@media tablet
 			background btn-color
+		@media desktop
+			padding-top 90px
+			padding-bottom 100px
 	&__block--blue
 		@media tablet
 			background #090c35
+		@media desktop
+			padding-top 100px
+			padding-bottom 90px
 	&__block--no-js
 		padding 20px 1%
 	&__slide
@@ -121,6 +150,8 @@
 		@media tablet
 			font-size 18px
 			line-height 28px
+		@media desktop
+			font-size 20px
 	&__block-content--white-font
 		@media tablet
 			color #fff

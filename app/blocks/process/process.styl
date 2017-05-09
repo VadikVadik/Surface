@@ -1,0 +1,124 @@
+.process-item
+	display flex
+	flex-direction column
+	position relative
+	padding 293px 20px 80px 20px
+	@media tablet
+		padding 505px 33px 100px 33px
+	@media desktop
+		flex-direction row
+		align-items center
+		align-items flex-start
+		min-height 730px
+		padding 211px 0 0 0
+		box-sizing border-box
+	&::before
+		content ""
+		position absolute
+		display block
+		top 90%
+		left 10%
+		transform translateX(-50%)
+		width 22px
+		height 5px
+		background btn-color
+		border-radius 2px
+		@media tablet
+			top 92%
+			left 6%
+		@media desktop
+			top 85%
+			left 60%
+	&--one
+		background url(../images/process1-bg-320.jpg) no-repeat 50% 0%
+		@media tablet
+			background url(../images/process1-bg-768.jpg) no-repeat 50% 0%
+		@media desktop
+			background url(../images/process1-bg-1920.jpg) no-repeat 0% 0%
+	&--two
+		background url(../images/process2-bg-320.jpg) no-repeat 50% 0%
+		@media tablet
+			background url(../images/process2-bg-768.jpg) no-repeat 50% 0%
+		@media desktop
+			background url(../images/process2-bg-1920.jpg) no-repeat 100% 0%
+			justify-content space-between
+		&::before
+			@media desktop
+				left 8%
+		&-content
+			@media desktop
+				margin-left 130px
+	&--three
+		background url(../images/process3-bg-320.jpg) no-repeat 50% 0%
+		@media tablet
+			background url(../images/process3-bg-768.jpg) no-repeat 50% 0%
+		@media desktop
+			background url(../images/process3-bg-1920.jpg) no-repeat 0% 0%
+	&__number
+		display block
+		position relative
+		width 70px
+		padding 18px 0
+		margin-bottom 20px
+		text-align center
+		font-size 14px
+		line-height 34px
+		font-weight bold
+		color #f5f6f7
+		background btn-color
+		@media tablet
+			width 116px
+			font-size 24px
+			padding 41px 0
+			margin-bottom 50px
+		@media desktop
+			width 168px
+			margin-left 50%
+			padding 67px 0
+			transform translateX(-50%)
+		&--left
+			@media desktop
+				order 2
+				margin-left 0
+				margin-right 50%
+				transform translateX(50%)
+		&::before
+			content ""
+			position absolute
+			display block
+			top 65%
+			left 50%
+			transform translateX(-50%)
+			width 16px
+			height 4px
+			background #f5f6f7
+			border-radius 1px
+			opacity 0.3
+			@media tablet
+				width 22px
+			@media desktop
+				height 5px
+				top 60%
+	&__content-head
+		text-transform uppercase
+		font-size 28px
+		font-weight bold
+		line-height 34px
+		color #e7e7e7
+		margin-bottom 18px
+		@media tablet
+			font-size 90px
+			line-height 60px
+			margin-bottom 40px
+		@media desktop
+			line-height 90px
+			margin-top 40px
+			margin-bottom 120px
+	&__content-descr
+		font-size 16px
+		line-height 20px
+		@media tablet
+			font-size 24px
+			line-height 28px
+		@media desktop
+			width 535px
